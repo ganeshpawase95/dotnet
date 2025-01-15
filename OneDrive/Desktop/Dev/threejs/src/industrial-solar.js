@@ -6,7 +6,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 // Create scene, camera, and renderer
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 100);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -22,7 +22,7 @@ controls.minDistance = 10;
 controls.maxDistance = 50;
 
 // Create lighting
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
@@ -176,7 +176,7 @@ infoBox.style.borderRadius = '5px';
 infoBox.style.display = 'none';
 document.body.appendChild(infoBox);
 
-// Click event handler
+//click 
 function onDocumentMouseDown(event) {
   event.preventDefault();
 
@@ -239,8 +239,6 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
-
-// Start animation
 animate();
 
 console.log('Interactive Industrial Solar Facility created:');
