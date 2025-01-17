@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6.0.5"
+    "vite": "^6.0.7"
   },
   "dependencies": {
+    "@react-three/drei": "^9.121.1",
+    "@types/react": "^19.0.7",
     "three": "^0.172.0"
   }
 }
